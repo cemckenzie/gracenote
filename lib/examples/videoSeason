@@ -1,0 +1,8 @@
+require 'gracenotecsdk'
+
+query = Video.new   
+query.gnsdk_init "config/1358138511.txt",  "1358138511", "8CFA7E2101BEF8ADCE9E12D19F21AFA0", "user_1358138511.txt", "online"
+query.setQueryOptions GnSDK::GNSDK_VIDEO_OPTION_ENABLE_EXTERNAL_IDS, "1"
+query.setQueryOptions GnSDK::GNSDK_VIDEO_OPTION_ENABLE_CONTENT_DATA, "1"
+query.setGdoTuiTag "327281251", "72F16565B0AF56D8FB973F04FF0DF175", "gnsdk_id_source_videowork"
+query.videoQuery "seasons"
